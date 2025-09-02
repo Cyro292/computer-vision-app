@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { HeaderSection } from "@/sections/HeaderSection";
 import { TasksSection } from "@/sections/TasksSection";
 import { FooterSection } from "@/sections/FooterSection";
-import PillNav from "@/components/reactbits/Components/PillNav/PillNav";
+// import PillNav from "@/components/reactbits/Components/PillNav/PillNav";
 
 export default function Home() {
 	const [activeSection, setActiveSection] = useState("header");
 
-	const navItems = [{ href: "#tasks", label: "Tasks" }];
+	// const navItems = [{ href: "#tasks", label: "Tasks" }];
 
 	useEffect(() => {
 		const handleScroll = () => {
