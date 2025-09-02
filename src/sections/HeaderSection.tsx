@@ -1,3 +1,4 @@
+import { memo } from "react"; // Import memo
 import Prism from "@/components/reactbits/Backgrounds/Prism/Prism";
 import { Badge } from "@/components/shadcn/ui/badge";
 
@@ -6,7 +7,7 @@ interface HeaderSectionProps {
 	onSectionChange: (section: string) => void;
 }
 
-export function HeaderSection({
+export const HeaderSection = memo(function HeaderSection({ // Wrap the component with memo for performance optimization
 	activeSection,
 	onSectionChange,
 }: HeaderSectionProps) {
@@ -26,6 +27,7 @@ export function HeaderSection({
 					colorFrequency={1}
 					hueShift={0}
 					scale={2.8}
+					suspendWhenOffscreen={true} // Add this prop to pause animation when off-screen
 				/>
 			</div>
 
@@ -45,7 +47,7 @@ export function HeaderSection({
 						variant="outline"
 						className="mb-6 text-sm border-white/20 text-white/80 bg-white/10"
 					>
-						CS2004
+						CS180
 					</Badge>
 					<p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
 						My Submition for the Course Computer Vision at the UC Berkeley.
@@ -54,4 +56,4 @@ export function HeaderSection({
 			</div>
 		</section>
 	);
-}
+}); // Close memo wrapper

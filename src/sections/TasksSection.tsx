@@ -95,24 +95,23 @@ export function TasksSection({
 		() =>
 			items ?? [
 				{
-					title: "Selfie View",
-					description: "Diffrent angles from selfies",
+					title: "The Wrong Way vs. The Right Way",
+					description: "Take a picture of your friend (or yourself) from close up. You get a typical distorted selfie image. Now step back several feet from your subject, zoom in, and take a second picture. Try to get the face in the second photo to be the same size as in the first photo. If you've done things right, the second portrait should look much better than the first one. Think about why this is.",
 					image: selfie,
 					status: "active",
 					href: "#",
 				},
 				{
-					title: "Instance Segmentation",
+					title: "Architectural Perspective Compression",
 					description:
-						"Pixel-accurate instance masks with Mask R-CNN and SAM variants. Focus on fine edges.",
-					image: moving,
-					status: "pending",
+						"Let's repeat the same procedure in reverse, for an urban scene. Pick a nice view down a long street (or a walking path on campus), zoom in, and take a photo. Now, walk down the street in the direction of your first shot, and take a second photo without zoom, such that the scene in the two photos appears approximately the same size. The first picture should look flattened, or compressed, compared to the second. Again, think about why.",
+					image: output,
+					status: "active",
 				},
 				{
-					title: "Pose Estimation",
-					description:
-						"Keypoint extraction for humans and tools with real-time constraints on edge devices.",
-					image: output,
+					title: "The Dolly Zoom",
+					description: "In this part, we will be duplicating a classic film effect called the dolly zoom. It is a camera movement also known as the 'Vertigo shot', after a famous scene in Hitchcock's Vertigo. Here are some examples of this effect in cinema.",
+					image: moving,
 					status: "active",
 				},
 			],
