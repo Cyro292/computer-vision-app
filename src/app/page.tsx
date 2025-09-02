@@ -9,9 +9,7 @@ import PillNav from "@/components/reactbits/Components/PillNav/PillNav";
 export default function Home() {
 	const [activeSection, setActiveSection] = useState("header");
 
-	const navItems = [
-		{ href: "#tasks", label: "Tasks" },
-	];
+	const navItems = [{ href: "#tasks", label: "Tasks" }];
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -47,21 +45,6 @@ export default function Home() {
 
 	return (
 		<>
-			<div className="absolute z-20 flex h-14 justify-center w-full">
-				<PillNav
-					logo="/logo.svg"
-					logoAlt="Company Logo"
-					items={navItems}
-					activeHref="/"
-					className="custom-nav"
-					ease="power2.easeOut"
-					baseColor="#000000"
-					pillColor="#ffffff"
-					hoveredPillTextColor="#ffffff"
-						pillTextColor="#000000"
-				/>
-			</div>	
-
 			<div className="relative">
 				<HeaderSection
 					activeSection={activeSection}

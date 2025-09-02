@@ -48,96 +48,9 @@ export function FooterSection({}: FooterSectionProps) {
 	];
 
 	return (
-		<section id="footer" className="min-h-screen bg-gray-100 relative">
+		<section id="footer" className="min-h-300px relative">
 			<div className="container mx-auto px-4 py-8 h-full">
 				<div className="max-w-4xl mx-auto">
-					<div className="text-center mb-8">
-						<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-							Footer
-						</h2>
-						<p className="text-gray-600">
-							Resources and additional information
-						</p>
-					</div>
-
-					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-						{/* Quick Links */}
-						<Card>
-							<CardHeader>
-								<CardTitle>Quick Links</CardTitle>
-							</CardHeader>
-							<CardContent>
-								<div className="space-y-2">
-									{quickLinks.map((link, index) => (
-										<div key={index}>
-											<a
-												href={link.href}
-												className="block p-2 rounded hover:bg-gray-50"
-											>
-												<h4 className="font-medium text-gray-900">
-													{link.name}
-												</h4>
-												<p className="text-sm text-gray-600">
-													{link.description}
-												</p>
-											</a>
-										</div>
-									))}
-								</div>
-							</CardContent>
-						</Card>
-
-						{/* Technologies */}
-						<Card>
-							<CardHeader>
-								<CardTitle>Technologies</CardTitle>
-							</CardHeader>
-							<CardContent>
-								<div className="space-y-2">
-									{technologies.map((tech, index) => (
-										<div
-											key={index}
-											className="flex items-center justify-between p-2 rounded bg-gray-50"
-										>
-											<Badge className={tech.color}>{tech.name}</Badge>
-											<span className="text-sm text-gray-500">
-												v{tech.version}
-											</span>
-										</div>
-									))}
-								</div>
-							</CardContent>
-						</Card>
-
-						{/* Learning Resources */}
-						<Card>
-							<CardHeader>
-								<CardTitle>Resources</CardTitle>
-							</CardHeader>
-							<CardContent>
-								<div className="space-y-2">
-									{resources.map((resource, index) => (
-										<div
-											key={index}
-											className="flex items-center justify-between p-2 rounded hover:bg-gray-50"
-										>
-											<div>
-												<h4 className="font-medium text-gray-900">
-													{resource.name}
-												</h4>
-												<Badge variant="outline" className="text-xs">
-													{resource.type}
-												</Badge>
-											</div>
-											<Button variant="ghost" size="sm">
-												View
-											</Button>
-										</div>
-									))}
-								</div>
-							</CardContent>
-						</Card>
-					</div>
 
 					{/* Simple Footer Info */}
 					<div className="text-center pt-8 border-t border-gray-200">
